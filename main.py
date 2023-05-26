@@ -2,12 +2,15 @@ import requests
 
 def get_weather():
 
-        urls = ['https://wttr.in/Шереметьево?nTqM&lang=ru', 
-                'https://wttr.in/Лондон?nTqM&lang=ru',
-                'https://wttr.in/Череповец?nTqM&lang=ru']
+        urls = ['https://wttr.in/Шереметьево', 
+                'https://wttr.in/Лондон',
+                'https://wttr.in/Череповец']
+        
+        params_dict = {'nTqM': '',
+                  'lang': 'ru'}
 
         for url in urls:
-                response = requests.get(url)
+                response = requests.get(url, params=params_dict)
                 response.raise_for_status()
                 print(response.text)
 
