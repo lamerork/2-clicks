@@ -1,6 +1,6 @@
 import requests
 
-def get_weather():
+def main():
 
         cities = ['Шереметьево',
                 'Лондон',
@@ -17,4 +17,4 @@ def get_weather():
                 print(response.text)
 
 if __name__ == '__main__':
-        get_weather()
+        main()
